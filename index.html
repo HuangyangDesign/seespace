@@ -45,7 +45,7 @@
 				pos = 0;
       }
 		}
-		var interval = setInterval(changeImg, 100);
+		var interval = setInterval(changeImg, 200);
 
 		$(".sequencer").on('click', function(){
 			if (click_num % 2 == 1) {
@@ -58,7 +58,7 @@
 			}else{
 				$(".fader > img").css("height","100%");
 				$(".fader").css("margin","0");
-				interval = setInterval(changeImg, 100);
+				interval = setInterval(changeImg, 200);
 			};
 			click_num++;
 		});

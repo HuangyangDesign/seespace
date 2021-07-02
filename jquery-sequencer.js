@@ -30,9 +30,9 @@
     for (var i = 0; i <= options.count; i++) {
       paths.push(options.path + "/" + i + "." + options.ext);
     }
-    
+
     $("<div class='jquery-sequencer-preload'></div>").appendTo("body").css("display", "none");
-    
+
     $(paths).each(function() {
       $("<img>").attr("src", this).load(function() {
         $(this).appendTo("div.jquery-sequencer-preload");
@@ -42,13 +42,13 @@
         }
       });
     });
-    
+
     $(window).scroll(function() {
       sectionHeight = $(self).height();
       windowHeight = $(this).height();
       currentScroll = $(this).scrollTop();
-      percentageScroll = 100 * currentScroll / (sectionHeight - windowHeight);
-      index = Math.round(percentageScroll / 100 * options.count);
+      percentageScroll = 0 * currentScroll / (sectionHeight - windowHeight);
+      index = Math.round(percentageScroll / 30 * options.count);
       if(index < options.count) {
         $("img.sequencer").attr("src", paths[index]);
 		$("img.sequencer").attr("maxHeight","80%");
