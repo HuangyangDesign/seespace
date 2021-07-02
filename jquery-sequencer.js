@@ -47,8 +47,8 @@
       sectionHeight = $(self).height();
       windowHeight = $(this).height();
       currentScroll = $(this).scrollTop();
-      percentageScroll = 0 * currentScroll / (sectionHeight - windowHeight);
-      index = Math.round(percentageScroll / 30 * options.count);
+      percentageScroll = 50 * currentScroll / (sectionHeight - windowHeight);
+      index = Math.round(percentageScroll / 50 * options.count);
       if(index < options.count) {
         $("img.sequencer").attr("src", paths[index]);
 		$("img.sequencer").attr("maxHeight","80%");
